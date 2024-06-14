@@ -5,7 +5,7 @@ let stocks = {
   toppings : [ 'chocolate', 'peanuts']
 }
 
-let is_shop_open = false;
+let is_shop_open = true;
 
 let order = (time , work) => {
   return new Promise( (resolve, reject)=>{
@@ -30,5 +30,6 @@ order(2000,()=> console.log(`${stocks.fruits[0]}`))
 .then(()=> order(1000,()=> console.log(`machine started`)))
 .then(()=> order(2000,()=> console.log(`put icecream on the ${stocks.holder[1]}`)))
 .then(()=> order(3000,()=> console.log(`added ${stocks.toppings[0]}`)))
-.then(()=> order(2,()=> console.log(`served icecream`)))
+.then(()=> order(2000,()=> console.log(`served icecream`)))
 .catch(()=> error => console.log(error))
+.finally(()=> console.log("Finished"))
