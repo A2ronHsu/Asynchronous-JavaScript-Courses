@@ -21,10 +21,7 @@ const getToDo = (resources) => {
 }
 
 console.log('start here');
+
 getToDo('./JSON-API-Simulation/1.json')
-.then(getToDo('./JSON-API-Simulation/2.json'))
-.then(getToDo('./JSON-API-Simulation/3.json'))
-.then(getToDo('./JSON-API-Simulation/4.json'))
-.then(getToDo('./JSON-API-Simulation/5.json'))
-console.log(output)
+.then(()=>console.log(output))
 console.log("non-blocking")
